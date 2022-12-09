@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANGMAN</title>
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+    <div class="container jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-4">HANGMAN GAME</h1>
+          <p class="lead">FIND FOOTBAL PLAYERS NAME</p>
+        </div>
+      </div>
+    
+      <div class="card float-left" style="width: 18rem;">
+        <img id="imagePlayer" src="/img/random.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+    
+    <div class="container jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-4">Press ank key to get started</h1>
+          <h2 id="nameGamerTop" class="display-4 text-warning">name gamer</h2>
+          <p class="lead text-danger"></p>
+        </div>
+      </div>
+       
+      <div class="container jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <p class="lead text-info">CURRENT WORD</p>
+          <p id="nameGamer" class="lead">--------------</p>
+          <p class="lead text-danger">NUMBER OF GUESSES REMAINING</p>
+          <p id="numberRemaining" class="lead text-danger">5</p>
+          <p class="lead text-primary">LATEST ALREADY GUESSED</p>
+          <p id="latestGuessed" class="lead">--------------</p>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+    <!-- JavaScript -->
+    <script src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
