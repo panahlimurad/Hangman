@@ -8,6 +8,8 @@
 <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
     <div class="container">
@@ -35,12 +37,14 @@
        
       <div class="container jumbotron jumbotron-fluid">
         <div class="container text-center">
-          <p class="lead text-info">CURRENT WORD</p>
-          <p id="nameGamer" class="lead">--------------</p>
+          <div id="nameGamer" class="lead text-info current">
+        
+          </div>
           <p class="lead text-danger">NUMBER OF GUESSES REMAINING</p>
           <p id="numberRemaining" class="lead text-danger">5</p>
-          <p class="lead text-primary">LATEST ALREADY GUESSED</p>
-          <p id="latestGuessed" class="lead">--------------</p>
+          <div id="latestGuessed" class="lead text-primary current">
+          
+        </div>
         </div>
       </div>
     
