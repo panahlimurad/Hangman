@@ -3,11 +3,14 @@ var nameGamerTop = document.querySelector("#nameGamerTop")
 var nameGamer = document.querySelector("#nameGamer")
 var numberRemaining = document.querySelector("#numberRemaining")
 var latestGuessed = document.querySelector("#latestGuessed")
+var resultGame = document.querySelector("#resultGame")
 
 
-var correctLetters = ['r','o','m','a', 'n', 'l','d','o'];
+var correctLetters = [];
 var wrongLetters = [];
-var userLimit = 5;
+var userLimit = 10;
+var selectedWord = getRandomName();
+
 
 // function getRandomName(){
 //     var gamer = ["ronaldo", "messi", "mbappe"];
@@ -63,9 +66,8 @@ var userLimit = 5;
     }
     
     function displayWord(){
-        var selectedWord = getRandomName();
-    
-        nameGamer.innerHTML = `
+        
+         nameGamer.innerHTML = `
             ${selectedWord.split('').map(letter => `
             <div class ="leader">
             ${correctLetters.includes(letter) ? letter : ''}
@@ -74,11 +76,47 @@ var userLimit = 5;
 
             var word = nameGamer.innerText.replace(/\n/g,'');
             if(word === selectedWord){
-                console.log("bildiniz");
+                resultGame.innerHTML = "QAZANDINIZ"
+                nameGamerTop.innerHTML = word
             }
 
-
-
         }
+
+        function updateWrongLatters(){
+            latestGuessed.innerHTML = `
+                ${wrongLetters.length > 0 ? `<h3>DUZGUN OLMYAN HERFLER</h3>` : ''}
+                ${wrongLetters.map(letter => `<span>${letter}<span>`)}
+
+            `;
+        }
+
+        window.addEventListener('keydown', function(e) {
+           
+            numberRemaining.innerHTML = userLimit
+            userLimit --
+            if(userLimit === 0){
+                alert("siz uduzdunuz");
+            }
+           
+            if (e.keyCode >= 65 && e.keyCode <= 90){
+                var letter = e.key;
+
+                if(selectedWord.includes(letter)){
+                    if(!correctLetters.includes(letter)){
+                        correctLetters.push(letter);
+                        displayWord();
+                    } else{
+                        console.log("bu herfi artiq elave etdiz");
+                    }
+                } else{
+                    if(!wrongLetters.includes(letter)){
+                        wrongLetters.push(letter);
+                        updateWrongLatters()
+                    }
+                }
+            }
+        })
+
+        
 
     displayWord()
