@@ -32,7 +32,7 @@ var selectedWord = getRandomName();
             if(word === selectedWord){
                 resultGame.innerHTML = "YOU WIN"
                 nameGamerTop.innerHTML = word
-                imagePlayer.src = `./img/${nameGamerTop.innerHTML}.jpg`
+                imagePlayer.src = `/img/${nameGamerTop.innerHTML}.jpg`
                 
             }
 
